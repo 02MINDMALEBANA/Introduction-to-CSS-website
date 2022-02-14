@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(6, 30, 136); 
+    background-image: url(./media/ppp1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#firstTable{
+    width: 100%;
+}
+.logo{
+    width: 100px;
+}
+
+nav{
+    padding-right: 20px;
+    padding: auto;
+    
+}
+a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: aqua;
+    font-size: large;
+}
+video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#secondTable{
+    width: 100%;
+}
+.paragraph{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: rgb(202, 236, 236);
+}
+#profile{
+    width: 500px;
+    height: auto;
+    border: 10px solid blue;
+    border-radius: 50%;
+}
+.myBio{
+    width: 60%;
+    text-align: left;
+}
+.more{
+    padding: 20px;
+    border-radius: 10px;
+    font-size: medium;
+}
+.myFooter{
+    color: rgb(4, 1, 8);
+}
+#about{
+    width: 50%;
+    height: auto;
+}
+#firstForm{
+    width: 50%;
+    height: auto;
+
+}
+.btn{
+    font-size: small;
+    border-radius: 7px;
+    padding: 10px;
+    
+}
