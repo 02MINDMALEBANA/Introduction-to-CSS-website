@@ -4,54 +4,83 @@
         <title>Contact Us</title>
         <link rel="stylesheet" href="stylesheet.css"> 
     </head>
-    <body>
-        <style>
-              body{
-                    background-image: url(./media/pcc.jpg);
-                    background-attachment: fixed;
-                    background-repeat:no-repeat;
-                    background-size: cover;
-                } 
-        </style>
-       
-        <a href="#">Contact Us</a>
-        <a href="index.html">Home</a>
-        <a href="AboutMe.html">About me</a>
+    <body id="layout">
+        
+        <a id='contactUs' href="#"></a>
+        <a id='home' href="index.html"></a>
+        <a id='aboutMe'href="AboutMe.html"></a>
         <br><br> 
-        <!--THE CITY AND PROVINCE I CURRENTLY RESIDE IN-->
-
-       <b>The province I currently reside: <u>Limpopo</u><br>
-        In the city of:                   <u>Polokwane</u></b>
+        
         <br><br>
-        <form >
-            <table id="firstForm">
-                <tr>
-                    <td>
-                        <b><h3>
-                        Name<br>
-                        <input type="text" name="name"> <br><br> 
-                        Surname<br>
-                        <input type="text" name="surname"> <br><br> 
+ <form action="https://formspree.io/f/xknyrepl" method="POST" name="ContactDetails">
+    <table id="firstForm">
+        <tr>
+            <td>
+                <b><h3>
+                     User Name<br>
+                     <input type="text" name="name"> <br><br>
+                     Surname<br>
+                     <input type="text" name="surname"> <br><br> 
+                     <label>
+                      Your email: <br>
+                      <input type="email" name="email">
+                     </label>
+                     <br><br>
+                     
+                     Contact numbers: <br>
+                     <input type="text" name="contact"><br><br>
+                     <label>
+                     Your message:<br>
+                     <textarea id='comment' name="message"></textarea>
+                    </label>
+                     <br><br>
+            
+                     <button id="submitting" class="btn" onclick="Display()" type="submit">Send</button>
+               </h3></b>
+            </td>
+        </tr>
 
-                        Email Address: <br>
-                        <input type="text" name="email"><br><br>
 
-                        Contact numbers: <br>
-                        <input type="text" name="contact"><br><br>
+</table>
+</form>
+        <script>
+             document.getElementById('home').innerHTML="Home";
+             document.getElementById('aboutMe').innerHTML="About Me";
+             document.getElementById('contactUs').innerHTML="Contact Us";
+            function Display()
+            {
+            //declare the variables
+            var user;
+            var Surname;
+            var Email;
+            var Contact;
+            var Comments;
+            //assign the variables
+            user=ContactDetails.name.value;
+            Surname=ContactDetails.surname.value;
+            Email=ContactDetails.email.value;
+            Contact=ContactDetails.contact.value;
+           Comments=document.getElementById('comment').value;
+           //notify if the textboxes are empty
+           if(user==""){
+               alert('Please enter your Name');
+               return false;
+           }else if(Surname==""){
+               alert('Please enter your Surname');
+               return false;
+           } else if(Email==""){
+               alert('Please enter your Email address');
+               return false;
+           }else if(Contact==""){
+               alert('please enter your contact number');
+               return false;
+           }
 
-                        Comments:<br>
-                         <textarea  rows="5" cols="60">
+            //display the output
+            alert('Your details have been submitted, you will recieve our feedback')
 
-                         </textarea><br><br>
-                        
-                        <button class="btn"> Submit</button>
-                        </h3></b>
-                    </td>
-                </tr>
-           
-          
-            </table>
-        </form>
+        };
+        </script>
     
      </body>
 </html>

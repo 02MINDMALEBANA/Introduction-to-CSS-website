@@ -5,54 +5,34 @@
          <link rel="stylesheet" href="stylesheet.css"> 
 
     </head>
-    <body> 
-    <style>
-        body{
-            background-image: url(untitled.png);
-            background-attachment: fixed;
-            background-repeat:no-repeat;
-            background-size: cover;
-        }
-    </style>
+    <body id="layout1"> 
+   
+        <a id='aboutMe'href="#"></a>
+        <a id='home' href="index.html"></a>
+        <a  id='contactUs' href="contactUs.html"></a>
 
-        
-        <a href="#">About Me</a>
-        <a href="index.html">Home</a>
-        <a href="contactUs.html">Contact Us</a>
-
-        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-style: oblique;"><u>MY DETAILS</u></h3>
-       <table>
+        <h3 id="heading" style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-style: oblique;"></h3>
+     <table>
            <tr>
                <td>
-        <p id="about"><strong>
-            <!--MY PERSONAL DETAILS AND EDUCATIONAL BACKGROUND-->
-             My name is Malebana Kgopolo Mind, I am 24 years old.
-             I am staying at Ext 78 Polokwane.I started schooling at Kabelo Combined School and got transfered to Greenside Primary School to complete my primary level.
-             Then 2012 I went to Kabelo Secondary School and
-             completed my matric in 2016 and in 2018 I went to Capricorn
-             TVET College to study ITC doing NCV and I completed
-            in 2020.<br><br>
-            <!-- THE PROJECTS THAT I HAVE DONE IN THE PAST-->
-            I did different Projects when I was a student doing the Integrated Summative Assessment Tasks(ISAT), 2018 I did the circuit and soldering project and 
-            designing the user interface and coding it using Visual Basics. 2019 I did the advanced graphical user-interface 
-            and the shopping program using Visual Basics. Then 2020 I created a website.          
-            <br><br>
-            <!--WORKING EXPERIENCE-->
-            After completing my ITC certificate, I went to work as a Life skills and computer literacy 
-            tutor for 3 months at Capricorn TVET College and again worked as an Examination Assistance for a month 
-            at the same college.
-            <br><br>
-            <!--OTHER INFORMATION-->
-             I am a very passionate person, hardworking 
-             and I also enjoy to work in a team with others where we can even share ideas.
-             I love everything about technology and industrial revolution, It makes
-             our everyday lives easier. </strong>
-        </p>
-
-    </td>
-    </tr>
+        <p id="about"></p>
+    
+                 </td>
+            </tr>
     </table>
+    <script>  
+        //MY LINKS
+        document.getElementById('home').innerHTML="Home";
+        document.getElementById('aboutMe').innerHTML="About Me";
+        document.getElementById('contactUs').innerHTML="Contact Us";
 
+        //HEADING
+        document.getElementById("heading").innerHTML='<u>MY DETAILS</u>';
+        //MY DETAILS
+        document.getElementById("about").innerHTML='My name is Malebana Kgopolo Mind, I am 24 years old. I am staying at Ext 78 Polokwane.I started schooling at Kabelo Combined School and got transfered to Greenside Primary School to complete my primary level.Then 2012 I went to Kabelo Secondary School andcompleted my matric in 2016 and in 2018 I went to Capricorn TVET College to study ITC doing NCV and I completed in 2020.<br><br>I did different Projects when I was a student doing the Integrated Summative Assessment Tasks(ISAT), 2018 I did the circuit and soldering project and designing the user interface and coding it using Visual Basics. 2019 I did the advanced graphical user-interface and the shopping program using Visual Basics. Then 2020 I created a website. <br><br> After completing my ITC certificate, I went to work as a Life skills and computer literacy tutor for 3 months at Capricorn TVET College and again worked as an Examination Assistance for a month at the same college. <br><br>I am a very passionate person, hardworking  and I also enjoy to work in a team with others where we can even share ideas. I love everything about technology and industrial revolution, It makes our everyday lives easier.';
+
+
+    </script>
 
     </body>
 </html>

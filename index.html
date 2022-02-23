@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Introduction to CSS website</title>
+        <title> Bootcamp website</title>
         <link rel="stylesheet" href="stylesheet.css"> 
     </head>
   
@@ -10,13 +10,13 @@
             <table id="firstTable">
                 <tr>
                     <td>
-                        <img class="logo" src="logo1.jpg">
+                        <img id="logo1" class="logo">
                     </td>
                     <td align="right">
                         <nav>
-                            <a href="#">Home</a>
-                            <a href="contactUs.html">Contact Us</a>
-                             <a href="AboutMe.html">About Me</a>
+                            <a id="home" href="#"></a>
+                            <a id="aboutMe" href="AboutMe.html"></a>
+                            <a id="contactUs" href="contactUs.html"></a>
                         </nav>
                     </td>
                 </tr>
@@ -27,7 +27,7 @@
         <table id="secondTable">
             <tr>
                 <td colspan="2">
-                    <video src="coding.mp4" poster="strong.jpeg" controls>
+                    <video  id="video"  poster="strong.jpeg" controls>
                     
                     </video>
                 </td>
@@ -35,24 +35,14 @@
             <tr>
                 <td width="50%" align="center">
                     <div class="myBio">
-                        <h1>MALEABANA MIND</h1>
-                        <P class="paragraph"><strong>
-                            My name is Kgopolo Mind Malebana, I was born in 1998 on the 2nd of February.<br>
-                            I went to Kabelo Secondary School and completed my matric in 2016.<br>
-                            At high school I did the science stream and I always had a dream to work in the <br>
-                            technology industry or the medical industry, after I completed matric I took a gap year<br>
-                            because of I didn't get the space in institution's that I applied.
-                            
-                            <br><br>
-                            Then in 2018 I Went to Capricorn TVET College to study ITC doing NCV <br>
-                            and I completed it in 2020. </strong>
-                        </P>
-                        <button class="more">know me more</button>
+                        <h1 id="names"></h1>
+                        <P id='paragraph1' class="paragraph"></P>
+                        <button id='btn' class="more" onclick="ClickMeFunction()">know me more</button>
                     </div>
                  
                 </td>
                 <td align="right">
-                    <img id="profile" src="copy.jpg" alt="My Profile Picture">
+                    <img id="profile"alt="My Profile Picture">
                 </td>
             </tr>
 
@@ -60,16 +50,35 @@
         </table>
     </main>
     <footer>
-        <h2><u>Links and other contact details</u></h2>
+        <h2 id='details'></h2>
           <!--MY SOCIAL MEDIA LINKS-->
-       <h3 class="myFooter"><i>
-          <b>My whatsapp link ---</b><a href="https://chatwith.io/s/61fc1ebb8f5fa">https://chatwith.io/s/61fc1ebb8f5fa</a>
-          <br>
-          You can can contact me through my cellphone number: <b>0724033088</b><br>
-          My email address is:  <b><u>malebanakgopo@gmail.com</u></b><br>
-          or via my Facebook account:  <b></b><u>Malebana Kgopolo</u></b></h3></i>
+       <h3  id='socialmedia' class="myFooter"></h3>
+       
 
 
     </footer>
+    <script>
+        function ClickMeFunction(){
+            window.location.replace("AboutMe.html");
+        }
+        document.getElementById('logo1').src='logo1.jpg';
+        //my links
+        document.getElementById('home').innerHTML="Home";
+        document.getElementById('aboutMe').innerHTML="About Me";
+        document.getElementById('contactUs').innerHTML="Contact Us";
+        // My video
+        document.getElementById('video').src="coding.mp4";
+        //My bio
+        document.getElementById('names').innerHTML='MALEABANA MIND';
+        document.getElementById('paragraph1').innerHTML='<strong> My name is Kgopolo Mind Malebana, I was born in 1998 on the 2nd of February.<br> I went to Kabelo Secondary School and completed my matric in 2016.<br>At high school I did the science stream and I always had a dream to work in the <br>technology industry or the medical industry, after I completed matric I took a gap year<br> because of I did not get the space in institutions that I applied. <br><br>Then in 2018 I Went to Capricorn TVET College to study ITC doing NCV <br>and I completed it in 2020. </strong>';
+        //My profile picture
+        document.getElementById('profile').src="copy.jpg";
+        //Footer
+        document.getElementById('details').innerHTML='<u>Links and other contact details</u>';
+        document.getElementById('socialmedia').innerHTML='<i><b>My whatsapp link ---</b><a href="https://chatwith.io/s/61fc1ebb8f5fa">https://chatwith.io/s/61fc1ebb8f5fa</a><br>  You can can contact me through my cellphone number: <b>0724033088</b><br>My email address is:  <b><u>malebanakgopo@gmail.com</u></b><br>or via my Facebook account:  <b></b><u>Malebana Kgopolo</u></b></i>';
+
+
+
+    </script>
  </body>
 </html>
